@@ -39,10 +39,6 @@ npm start
 
 This will start the development server and open the application in your default web browser.
 
-## Contributing
-
-We welcome contributions to Pro Dashboard! If you have any suggestions or improvements, please feel free to submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
