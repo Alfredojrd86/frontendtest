@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Button, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faEye } from '@fortawesome/free-solid-svg-icons';
 import './Dashboard.css';
 
 function Dashboard() {
@@ -73,20 +73,19 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <Navbar bg="light" expand="lg" className="mb-4">
-        <Container fluid className="d-flex justify-content-between align-items-center">
-          <div style={{ visibility: 'hidden', width: '70px' }}>Spacer</div>
-          <Navbar.Brand className="m-0">Pro Dashboard</Navbar.Brand>
+      <Navbar bg="light" expand="lg" className="mb-3">
+        <Container fluid>
+          <Navbar.Brand>ProDashboard</Navbar.Brand>
           <Button
             variant="outline-danger"
             onClick={handleLogout}
-            style={{ width: '70px' }}
+            className="ms-auto"
           >
             Logout
           </Button>
         </Container>
       </Navbar>
-      <Container className="table-container">
+      <Container fluid className="dashboard-content">
         <div className="table-responsive">
           <table className="table table-striped table-bordered table-hover">
             <thead>
@@ -105,7 +104,7 @@ function Dashboard() {
                   <td>{comment.email}</td>
                   <td>
                     <Button variant="outline-primary" size="sm" onClick={() => openModal(comment)}>
-                      👁️ View
+                      <FontAwesomeIcon icon={faEye} /> View
                     </Button>
                   </td>
                 </tr>
@@ -113,7 +112,7 @@ function Dashboard() {
             </tbody>
           </table>
         </div>
-        <div className="pagination-container d-flex justify-content-center align-items-center mt-4">
+        <div className="pagination-container">
           <div className="pagination">
             <button
               className="pagination-arrow"
@@ -139,9 +138,9 @@ function Dashboard() {
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </div>
-        </div>
-        <div className="text-center mt-2">
-          Page {currentPage} of {totalPages}
+          <div className="page-info">
+            Page {currentPage} of {totalPages}
+          </div>
         </div>
       </Container>
       {selectedComment && (

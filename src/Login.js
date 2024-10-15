@@ -47,7 +47,7 @@ function Login() {
   return (
     <div className="login-container">
       <Form className="login-form" onSubmit={handleSubmit}>
-        <h2 className="login-title">Welcome Back</h2>
+        <h2 className="login-title">ProLogin</h2>
         <p className="login-subtitle">Please enter your details to sign in</p>
         <Form.Group className="mb-4" controlId="formBasicEmail">
           <Form.Label>Email Address</Form.Label>
