@@ -24,7 +24,7 @@ To install Pro Dashboard, follow these steps:
    git clone https://github.com/Alfredojrd86/frontendtest.git   ```
 
 2. Navigate to the project directory:   ```
-   cd pro-dashboard   ```
+   cd frontendtest   ```
 
 3. Install the dependencies:   ```
    npm install   ```
