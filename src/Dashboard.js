@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Button, Table, Modal, Navbar } from 'react-bootstrap';
+import { Container, Button, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './Dashboard.css';
@@ -88,7 +88,7 @@ function Dashboard() {
       </Navbar>
       <Container className="table-container">
         <div className="table-responsive">
-          <Table striped bordered hover>
+          <table className="table table-striped table-bordered table-hover">
             <thead>
               <tr>
                 <th>ID</th>
@@ -111,7 +111,7 @@ function Dashboard() {
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </table>
         </div>
         <div className="pagination-container d-flex justify-content-center align-items-center mt-4">
           <div className="pagination">
